@@ -1,15 +1,15 @@
 body {
-    background: rgb(204, 204, 204);
-    font-family: -apple-system, BlinkMacSystemFont;
+    background: rgb(54, 57, 63);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 300;
     font-size: 13px;
     line-height: 1.5;
-    color: #212529;
+    color: #c9c9c9;
     text-align: center;
 }
 
 page {
-    background: rgb(245, 245, 245);
+    background: rgb(54, 57, 63);
     text-align: left;
     display: block;
     margin: 0 auto;
@@ -23,6 +23,36 @@ page[size="A4"] {
     width: 21cm;
     height: 29.7cm;
 }
+
+
+/* Container for skill bars
+.container {
+  width: 100%; /* Full width */
+  /* background-color: #ddd; /* Grey background */
+/* } */
+
+.skills {
+  text-align: right; /* Right-align text */
+  padding-top: 10px; /* Add top padding */
+  padding-bottom: 10px; /* Add bottom padding */
+  color: white; /* White text color */
+}
+
+.html {width: 90%; background-color: #2196F3;}
+.css {width: 80%; background-color: #2196F3;}
+.js {width: 90%; background-color: #2196F3;}
+.mysql {width: 70%; background-color: #2196F3;}
+
+.gallery {
+    margin: 5px;
+    float: left;
+    width: 90px;
+  }
+  
+.gallery img {
+    width: 100%;
+    height: auto;
+  }
 
 @media print {
     body,
@@ -58,7 +88,7 @@ hr {
     margin-inline-end: auto;
     margin-bottom: 1rem;
     border: 0;
-    border-top: 1px solid rgba(0, 0, 0, .1);
+    border-top: 1px solid lightgrey;
     box-sizing: content-box;
     height: 0;
     overflow: visible;
@@ -119,7 +149,7 @@ i {
 }
 
 #left-content i:hover {
-    color: black;
+    color: white;
 }
 
 .h1 {
@@ -133,8 +163,8 @@ i {
     margin-bottom: 5px;
 }
 
-b {
-    font-weight: 300;
+.h1, b {
+    font-weight: 400;
 }
 
 a,
@@ -149,15 +179,17 @@ a:hover {
 
 p {
     margin: 0px;
+    text-align: justify;
+    text-justify: inter-word;
     padding-bottom: 15px;
 }
 
 #left-content {
     padding: 20px;
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(47, 49, 54);
     text-align: center;
-    margin-left: 10px;
-    width: 198px;
+    margin-left: 0px;
+    width: 208px;
     float: left;
 }
 
@@ -183,11 +215,22 @@ p {
     display: block;
 }
 
+#left-content .row{
+    display: flex ;
+}
+
+#left-content .column{
+    flex: 50% ;
+    padding-left: 10px ;
+    text-align: left;
+}
+
 #right-content {
-    width: 501px !important;
+    width: 491px !important;
     float: right;
     padding: 10px;
     padding-left: 20px;
+    padding-top: 20px;
     margin-right: 14px;
 }
 
@@ -223,7 +266,22 @@ p {
 }
 
 #projects .row {
+    display: flex;
     margin-bottom: 10px;
+}
+
+#projects .column {
+    float: left;
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+#projects .left {
+    width: 60% ;
+}
+
+#projects .right {
+    width: 40% ;
 }
 
 #projects .info {
@@ -244,9 +302,13 @@ p {
     padding-top: 0px !important;
 }
 
-#languages-section li {
-    display: block;
-    text-align: left;
+#languages-section {
+    justify-content: space-evenly;
+}
+
+#languages-section .logo {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .bar {
@@ -261,25 +323,6 @@ p {
     text-align: center;
 }
 
-#languages-section ul, #languages-section li {
-    text-align: center;
-}
-
-#languages-section .cpp {
-    width: 100%;
-}
-
-#languages-section .javascript {
-    width: 80%;
-}
-
-#languages-section .java {
-    width: 50%;
-}
-
-#languages-section .python {
-    width: 50%;
-}
 
 
 /* ##########  DARK THEME  ########## */
@@ -371,7 +414,7 @@ p {
     margin: 0px;
     padding: 0px;
     padding-right: 5px;
-    padding-left: 10px;
+    padding-left: 5px;
 }
 
 .work-header {
